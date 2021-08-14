@@ -42,8 +42,28 @@ html {
 .container .item {
   padding: 10px;
   border: 1px solid #fff;
-  background-color: green;
+
   text-align: center;
   color: #fff;
   width: 30%;
+}
+
+.item:nth-child(odd) {
+  background: green;
+}
+
+.item:nth-child(even) {
+  background: blue;
+}
+
+/*initially order of all items in flex container is 0. if we change order than 0,1,2,3 that way they are organize themselves*/
+
+.one {
+  order: 1;
+}
+.two {
+  order: 2;
+}
+.four {
+  order: 3;
 }
