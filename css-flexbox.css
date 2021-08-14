@@ -16,6 +16,19 @@ html {
   /*by default: flex-wrap: nowrap*/
   width: 100vw;
   flex-flow: row nowrap; /*flex-flow:[flex-direction][flex-wrap]*/
+
+  /*justify-content works only with main axis*/
+
+  /*
+  justify-content: flex-start; // whole container left-side
+  justify-content: flex-end; // whole container right-side
+  justify-content: center; // whole container center
+  justify-content: space-between;
+  justify-content: space-around; // not equal space
+
+  */
+
+  justify-content: space-evenly;
 }
 
 .container .item {
