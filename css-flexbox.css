@@ -15,7 +15,10 @@ html {
   /* flex-wrap: wrap;  */
   /*by default: flex-wrap: nowrap*/
   width: 100vw;
-  flex-flow: row nowrap; /*flex-flow:[flex-direction][flex-wrap]*/
+  height: 100vh;
+  flex-flow: row wrap; /*flex-flow:[flex-direction][flex-wrap]*/
+  justify-content: center;
+  align-content: center;
 
   /*justify-content works only with main axis*/
 
@@ -25,10 +28,15 @@ html {
   justify-content: center; // whole container center
   justify-content: space-between;
   justify-content: space-around; // not equal space
+  justify-content: space-evenly; // equal space
 
   */
 
-  justify-content: space-evenly;
+  /*align-item works only with cross axis*/
+  /*align-content works only with cross axis*/
+
+  /* align-content: center;
+  align-content: space-between; */
 }
 
 .container .item {
@@ -37,5 +45,5 @@ html {
   background-color: green;
   text-align: center;
   color: #fff;
-  width: 10%;
+  width: 30%;
 }
