@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  /*
+  flex-direction: column;
+  flex-direction: column-reverse;*/
+  /* flex-direction: row; */
+  /* flex-wrap: wrap;  */
+  /*by default: flex-wrap: nowrap*/
+  width: 100vw;
+  flex-flow: row nowrap; /*flex-flow:[flex-direction][flex-wrap]*/
+}
+
+.container .item {
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: green;
+  text-align: center;
+  color: #fff;
+  width: 10%;
+}
