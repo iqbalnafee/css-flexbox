@@ -19,6 +19,7 @@ html {
   flex-flow: row wrap; /*flex-flow:[flex-direction][flex-wrap]*/
   justify-content: center;
   align-content: center;
+  /* flex-grow: 1; */
 
   /*justify-content works only with main axis*/
 
@@ -45,7 +46,10 @@ html {
 
   text-align: center;
   color: #fff;
-  width: 30%;
+  /* width: 10%; */
+  flex-basis: 10%; /*width will overflow the container when screen size became smaller. SO we should use flex basis*/
+
+  /*flex: [flex-grow] [flex-shrink] [flex-basis]*/
 }
 
 .item:nth-child(odd) {
