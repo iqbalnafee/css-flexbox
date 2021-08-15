@@ -15,16 +15,41 @@ $base-color: red;
 }
 
 .container {
-  width: 100vw;
   height: 100vh;
   background-color: rgb(157, 179, 50);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 50px auto 50px;
 
   div {
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   @for $i from 1 through 4 {
     div:nth-child(#{$i}) {
       @include childHandler($i, lighten($base-color, $i * 10%));
     }
   }
+}
+.header {
+  //   grid-column-start: 1;
+  //   grid-column-end: 3;
+  //   grid-column: 1/3;
+  grid-column: 2/-1;
+}
+.footer {
+  //   grid-column-start: 1;
+  //   grid-column-end: 3;
+  //   grid-column: 1/3;
+  //grid-column: 1 / span 2; //1 theke suru hoye 2 column porjonto choriye jao
+  grid-column: 1/-1;
+}
+.content {
+  grid-column: 2/-1;
+}
+.menu {
+  grid-row: 1/3;
+  grid-column: 1/2;
 }
