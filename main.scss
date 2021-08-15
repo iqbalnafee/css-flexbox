@@ -1,0 +1,30 @@
+$base-color: red;
+
+@mixin childHandler($childnum, $color) {
+  background-color: $color;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(157, 179, 50);
+
+  div {
+    text-transform: uppercase;
+  }
+  @for $i from 1 through 4 {
+    div:nth-child(#{$i}) {
+      @include childHandler($i, lighten($base-color, $i * 10%));
+    }
+  }
+}
