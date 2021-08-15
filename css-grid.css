@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+.container {
+  background-color: rgb(141, 196, 39);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  /* grid-template-columns: 20% auto 20%; */
+  /* grid-template-columns: 1fr 2fr 3fr; 1:2:3 ratio. fr = fraction unit */
+  /* grid-template-rows: 20% 20% 20%; */
+  /* grid-template: 2fr 3fr / 1fr 2fr; row/column */
+  /* grid-row-gap: 5px;
+  grid-column-gap: 5px; */
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /*same as grid-template-columns: 1fr 1fr*/
+  grid-gap: 10px;
+}
+
+.item {
+  padding: 10px;
+
+  border: 1px solid #fff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item:nth-child(odd) {
+  background: rgba(255, 30, 0, 0.596);
+}
+
+.item:nth-child(even) {
+  background: rgba(0, 0, 255, 0.534);
+}
